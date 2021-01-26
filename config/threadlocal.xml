@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="suite" guice-stage="DEVELOPMENT" parallel="tests">
+  <parameter name="browser" value="chrome"></parameter>
+  <parameter name="url" value="http://ui.freecrm.com"></parameter>
+  <test thread-count="5" name="test1" verbose="2">
+    <classes>
+      <class name="tests.companies.SampleTestCases">
+        <methods>
+          <include name="testmethod"/>
+        </methods>
+      </class> <!-- tests.companies.SampleTestCases -->
+    </classes>
+  </test> <!-- Default test -->
+  <test thread-count="5" name="Default test" verbose="2">
+    <classes>
+      <class name="tests.companies.SampleTestCases">
+        <methods>
+          <include name="testmethod"/>
+        </methods>
+      </class> <!-- tests.companies.SampleTestCases -->
+    </classes>
+  </test> 
+</suite> <!-- Default suite -->
+            
